@@ -4,7 +4,7 @@ import SingleBook from "./SingleBook";
 
 class BookList extends Component {
   state = {
-    stringa: null
+    stringa: ""
   };
 
   render() {
