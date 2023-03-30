@@ -4,7 +4,7 @@ import SingleBook from "./SingleBook";
 
 class BookList extends Component {
   state = {
-    stringa: ""
+    stringa: null
   };
 
   render() {
@@ -25,11 +25,25 @@ class BookList extends Component {
           </Form.Group>
         </Form>
         <Row style={{ overflow: "auto" }} className="pt-3 flex-nowrap">
-          {this.props.books.map(book => (
-            <Col key={book.asin} className="pb-3 px-2">
-              <SingleBook img={book.img} title={book.title} price={book.price} />
-            </Col>
-          ))}
+          {!this.state.stringa ? (
+            <>
+              {this.props.books.map(book => (
+                <Col key={book.asin} className="pb-3 px-2">
+                  <SingleBook img={book.img} title={book.title} price={book.price} />
+                </Col>
+              ))}
+            </>
+          ) : (
+            <>
+              {this.props.books
+                .filter(book => book.title.toLowerCase().includes(this.state.stringa.toLowerCase()))
+                .map(book => (
+                  <Col key={book.asin} className="pb-3 px-2">
+                    <SingleBook img={book.img} title={book.title} price={book.price} />
+                  </Col>
+                ))}
+            </>
+          )}
         </Row>
       </>
     );
