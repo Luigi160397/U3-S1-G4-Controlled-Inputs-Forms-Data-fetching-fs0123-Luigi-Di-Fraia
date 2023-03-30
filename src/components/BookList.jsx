@@ -10,7 +10,7 @@ class BookList extends Component {
   render() {
     return (
       <>
-        <Form id="cerca" onSubmit={this.filterBookList}>
+        <Form id="cerca">
           <Form.Group className="mb-3" controlId="search">
             <Form.Control
               type="text"
