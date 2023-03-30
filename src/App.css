@@ -12,3 +12,7 @@
 .libri {
   width: 200px;
 }
+
+#cerca {
+  max-width: 200px;
+}

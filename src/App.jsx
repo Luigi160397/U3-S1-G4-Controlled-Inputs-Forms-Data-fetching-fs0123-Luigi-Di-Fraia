@@ -17,15 +17,15 @@ function App() {
       <MyNavbar />
       <Welcome />
       <Container className="pb-5">
-        <h2 className="display-4 pt-5">Sezione Fantasy:</h2>
+        <h2 className="display-4 pt-5 text-start">Sezione Fantasy:</h2>
         <BookList books={books1} />
-        <h2 className="display-4 pt-5">Sezione History:</h2>
+        <h2 className="display-4 pt-5 text-start">Sezione History:</h2>
         <BookList books={books2} />
-        <h2 className="display-4 pt-5">Sezione Horror:</h2>
+        <h2 className="display-4 pt-5 text-start">Sezione Horror:</h2>
         <BookList books={books3} />
-        <h2 className="display-4 pt-5">Sezione Romance:</h2>
+        <h2 className="display-4 pt-5 text-start">Sezione Romance:</h2>
         <BookList books={books4} />
-        <h2 className="display-4 pt-5">Sezione Shi-fi:</h2>
+        <h2 className="display-4 pt-5 text-start">Sezione Shi-fi:</h2>
         <BookList books={books5} />
       </Container>
       <MyFooter />
